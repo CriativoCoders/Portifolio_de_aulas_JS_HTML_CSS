@@ -1,20 +1,46 @@
-***Meu Projeto de Levantamento de Requisitos
+# Projeto de Levantamento de Requisitos
 
-Este projeto é um portfólio de aulas sobre levantamento de requisitos. O objetivo é apresentar diferentes técnicas e abordagens para coletar requisitos de forma eficaz.
+Este projeto é um portfólio de aulas sobre **levantamento de requisitos**. O objetivo é apresentar diferentes técnicas e abordagens para coletar requisitos de forma eficaz.
 
-__Estrutura do Projeto
+---
 
-__Como Usar
+## Estrutura do Projeto
+
+- **index.html**: Página principal com a lista de aulas.
+- **aula1.html**: Detalhes da primeira aula.
+- **aula2.html**: Detalhes da segunda aula.
+- **...**: E assim por diante para cada aula.
+
+---
+
+## Como Usar
 
 1. Abra o arquivo `index.html` em um navegador para visualizar a lista de aulas.
 2. Clique nos links para acessar as páginas individuais de cada aula.
 
-__Tecnologias Usadas
+---
 
-- HTML
-- CSS
-- JavaScript
+## Tecnologias Usadas
 
-__Autor(a)
+- **HTML**: Estruturação do conteúdo.
+- **CSS**: Estilização e layout das páginas.
+- **JavaScript**: Interatividade e funcionalidades dinâmicas.
 
-Talita Cristina Alves Lobato.
+---
+
+## Atividades Práticas
+
+Este portfólio também contém **atividades práticas de JavaScript** que permitem aplicar os conceitos aprendidos nas aulas. As atividades incluem:
+
+- Exercícios de manipulação do DOM.
+- Criação de formulários interativos.
+- Implementação de validações de entrada.
+- Projetos pequenos para consolidar o aprendizado.
+
+---
+
+## Autor(a)
+
+**Talita Cristina Alves Lobato** 🦄🦄
+
+---
