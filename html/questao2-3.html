@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inverter String</title>
+</head>
+<body>
+    <h1>Inverter uma palavra/h1>
+    <input type="text" id="inputString" placeholder="Digite uma palavra">
+    <button id="invertButton">Inverter</button>
+    <h2 id="result"></h2>
+
+    <script>
+        const inverterString = () => {
+            const str = document.getElementById('inputString').value;
+            const strInvertida = str.split('').reverse().join('');
+            document.getElementById('result').innerText = `String invertida: ${strInvertida}`;
+        };
+
+        document.getElementById('invertButton').addEventListener('click', inverterString);
+    </script>
+</body>
+</html>

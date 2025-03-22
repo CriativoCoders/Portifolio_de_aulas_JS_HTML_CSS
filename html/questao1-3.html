@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+</head>
+<body>
+    <h1>Calculadora</h1>
+    <input type="number" id="num1" placeholder="Número 1">
+    <input type="number" id="num2" placeholder="Número 2">
+    <select id="operacao">
+        <option value="soma">Soma</option>
+        <option value="subtracao">Subtração</option>
+        <option value="multiplicacao">Multiplicação</option>
+        <option value="divisao">Divisão</option>
+    </select>
+    <button id="calcular">Calcular</button>
+    <h2 id="resultado"></h2>
+
+    <script>
+        const calcular = () => {
+            const num1 = parseFloat(document.getElementById('num1').value);
+            const num2 = parseFloat(document.getElementById('num2').value);
+            const operacao = document.getElementById('operacao').value;
+            let resultado;
+
+            const soma = (a, b) => a + b;
+            const subtracao = (a, b) => a - b;
+            const multiplicacao = (a, b) => a * b;
+            const divisao = (a, b) => a / b;
+
+            switch (operacao) {
+                case 'soma':
+                    resultado = soma(num1, num2);
+                    break;
+                case 'subtracao':
+                    resultado = subtracao(num1, num2);
+                    break;
+                case 'multiplicacao':
+                    resultado = multiplicacao(num1, num2);
+                    break;
+                case 'divisao':
+                    resultado = divisao(num1, num2);
+                    break;
+                default:
+                    resultado = 'Operação inválida';
+            }
+
+            document.getElementById('resultado').innerText = `Resultado: ${resultado}`;
+        };
+
+        document.getElementById('calcular').addEventListener('click', calcular);
+    </script>
+</body>
+</html>

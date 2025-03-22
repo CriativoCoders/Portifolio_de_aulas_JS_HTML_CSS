@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Separar Letras do Nome</title>
+    <style>
+        .letra {
+            display: inline-block;
+            margin: 5px;
+            padding: 10px;
+            border: 1px solid #000;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Separar Letras do Nome</h1>
+    <input type="text" id="inputNome" placeholder="Digite seu nome">
+    <button id="separarButton">Separar Letras</button>
+    <div id="resultado"></div>
+
+    <script>
+        const separarLetras = () => {
+            const nome = document.getElementById('inputNome').value;
+            const resultadoDiv = document.getElementById('resultado');
+            resultadoDiv.innerHTML = ''; // Limpa o resultado anterior
+
+            // Itera sobre cada letra do nome e cria um elemento para cada uma ..............
+            for (let letra of nome) {
+                const span = document.createElement('span');
+                span.className = 'letra';
+                span.textContent = letra;
+                resultadoDiv.appendChild(span);
+            }
+        };
+
+        document.getElementById('separarButton').addEventListener('click', separarLetras);
+    </script>
+</body>
+</html>

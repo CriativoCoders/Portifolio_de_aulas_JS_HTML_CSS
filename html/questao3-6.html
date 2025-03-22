@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Converter Horas em Minutos</title>
+</head>
+<body>
+    <h1>Converter Horas em Minutos</h1>
+    
+    <input type="number" id="inputHoras" placeholder="Digite o número de horas">
+    
+    <button id="converterButton">Converter</button>
+    
+    <h2 id="resultado"></h2>
+
+    <script>
+        const converterHorasParaMinutos = () => {
+            const horas = parseFloat(document.getElementById('inputHoras').value);
+            const resultadoDiv = document.getElementById('resultado');
+
+            if (isNaN(horas)) {
+                resultadoDiv.innerText = 'Por favor, insira um número válido de horas.'; // Mensagem de erro
+                return; // Sai da função se erro
+            }
+
+            const minutos = horas * 60;
+
+            resultadoDiv.innerText = `${horas} horas equivalem a ${minutos} minutos.`;
+        };
+
+        document.getElementById('converterButton').addEventListener('click', converterHorasParaMinutos);
+    </script>
+</body>
+</html>
