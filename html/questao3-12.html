@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cálculo de Juros Compostos</title>
+</head>
+<body>
+    <h1>Cálculo de Juros Compostos</h1>
+    
+    <!-- Campo para o usuário digitar o capital inicial -->
+    <input type="number" id="inputCapital" placeholder="Digite o capital inicial" min="0" step="0.01">
+    
+    <!-- Campo para o usuário digitar a taxa de juros -->
+    <input type="number" id="inputTaxa" placeholder="Digite a taxa de juros (%)" min="0" step="0.01">
+    
+    <!-- Campo para o usuário digitar o número de períodos -->
+    <input type="number" id="inputPeriodos" placeholder="Digite o número de períodos" min="1" step="1">
+    
+    <!-- Botão para calcular os juros compostos -->
+    <button id="calcularButton">Calcular Juros Compostos</button>
+    
+    <!-- Onde o resultado será exibido -->
+    <h2 id="resultado"></h2>
+
+    <script>
+        // Função para calcular juros compostos
+        const calcularJurosCompostos = (capital, taxa, periodos) => {
+            const r = taxa / 100; // Converte a taxa de porcentagem para decimal
+            const montante = capital * Math.pow((1 + r), periodos); // Calcula o montante
+            return montante;
+        };
+
+        // Adiciona um evento ao botão para chamar a função quando clicado
+        document.getElementById('calcularButton').addEventListener('click', () => {
+            const capital = parseFloat(document.getElementById('inputCapital').value);
+            const taxa = parseFloat(document.getElementById('inputTaxa').value);
+            const periodos = parseInt(document.getElementById('inputPeriodos').value);
+            const resultadoDiv = document.getElementById('resultado');
+
+            // Verifica se os valores são válidos
+            if (isNaN(capital) || capital < 0 || isNaN(taxa) || taxa < 0 || isNaN(periodos) || periodos < 1) {
+                resultadoDiv.innerText = 'Por favor, insira valores válidos.'; // Mensagem de erro
+                return; // Sai da função se houver erro
+            }
+
+            // Calcula o montante usando a função de juros compostos
+            const montante = calcularJurosCompostos(capital, taxa, periodos);
+
+            // Exibe o resultado
+            resultadoDiv.innerText = `O montante final após ${periodos} períodos é: R$ ${montante.toFixed(2)}`;
+        });
+    </script>
+</body>
+</html>

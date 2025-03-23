@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cálculo de INSS</title>
+</head>
+<body>
+    <h1>Cálculo de INSS</h1>
+    
+    <!-- Campo para o usuário digitar o salário -->
+    <input type="number" id="inputSalario" placeholder="Digite seu salário" min="0" step="0.01">
+    
+    <!-- Botão para calcular o INSS -->
+    <button id="calcularButton">Calcular INSS</button>
+    
+    <!-- Onde o resultado será exibido -->
+    <h2 id="resultado"></h2>
+
+    <script>
+        // Função de seta para calcular o INSS
+        const calcularINSS = (salario) => {
+            let inss = 0;
+
+            // Calcula o INSS com base nas alíquotas
+            if (salario <= 1302.00) {
+                inss = salario * 0.075; // 7.5%
+            } else if (salario <= 2571.29) {
+                inss = salario * 0.09; // 9%
+            } else if (salario <= 3856.94) {
+                inss = salario * 0.12; // 12%
+            } else {
+                inss = salario * 0.14; // 14%
+            }
+
+            return inss;
+        };
+
+        // Adiciona um evento ao botão para chamar a função quando clicado
+        document.getElementById('calcularButton').addEventListener('click', () => {
+            const salario = parseFloat(document.getElementById('inputSalario').value);
+            const resultadoDiv = document.getElementById('resultado');
+
+            // Verifica se o salário é válido
+            if (isNaN(salario) || salario < 0) {
+                resultadoDiv.innerText = 'Por favor, insira um salário válido.'; // Mensagem de erro
+                return; // Sai da função se houver erro
+            }
+
+            // Calcula o INSS usando a função de seta
+            const inss = calcularINSS(salario);
+
+            // Exibe o resultado
+            resultadoDiv.innerText = `O valor do INSS a ser pago é: R$ ${inss.toFixed(2)}`;
+        });
+    </script>
+</body>
+</html>

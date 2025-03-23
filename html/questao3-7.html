@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Cédulas</title>
+</head>
+<body>
+    <h1>Calculadora de Cédulas</h1>
+    
+    <!-- Campo para o usuário para digitar o valor -->
+    <input type="number" id="inputValor" placeholder="Digite um valor" min="1" step="0.01">
+    
+    <!-- Botão para calcular as cédulas em dinheirinhos kkkk -->
+    <button id="calcularButton">Calcular Cédulas</button>
+    
+    <!-- Onde o resultado será exibido -->
+    <div id="resultado"></div>
+
+    <script>
+        // Função que calcula a quantidade de cédulas
+        const calcularCedulas = () => {
+            // Obtém o valor do campo de entrada
+            const valor = parseFloat(document.getElementById('inputValor').value);
+            const resultadoDiv = document.getElementById('resultado');
+
+            // Verifica se o valor inserido é válido
+            if (isNaN(valor) || valor <= 0) {
+                resultadoDiv.innerText = 'Por favor, insira um valor válido.'; // Mensagem de erro
+                return; // Sai da função se houver erro
+            }
+
+            // Limpa o resultado anterior
+            resultadoDiv.innerHTML = '';
+
+            // Denominações das cédulas
+            const cedulas = [200, 100, 50, 20, 10, 5, 2, 1];
+
+            // Calcula a quantidade de cédulas necessárias
+            for (let cedula of cedulas) {
+                const quantidade = Math.floor(valor / cedula); // Quantidade de cédulas dessa denominação
+                if (quantidade > 0) {
+                    resultadoDiv.innerHTML += `Cédulas de R$${cedula}: ${quantidade}<br>`; // Exibe a quantidade
+                }
+                valor -= quantidade * cedula; // Atualiza o valor restante
+            }
+        };
+
+        // Adiciona um evento ao botão para chamar a função quando clicado
+        document.getElementById('calcularButton').addEventListener('click', calcularCedulas);
+    </script>
+</body>
+</html>

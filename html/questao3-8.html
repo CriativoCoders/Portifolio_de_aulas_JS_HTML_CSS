@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcular Raiz Quadrada</title>
+</head>
+<body>
+    <h1>Calcular Raiz Quadrada</h1>
+    
+    <!-- Campo para o usuário digitar um número -->
+    <input type="number" id="inputNumero" placeholder="Digite um número" min="0" step="0.01">
+    
+    <!-- Botão para calcular a raiz quadrada -->
+    <button id="calcularButton">Calcular Raiz Quadrada</button>
+    
+    <!-- Onde o resultado será exibido -->
+    <h2 id="resultado"></h2>
+
+    <script>
+        // Função que calcula a raiz quadrada
+        const calcularRaizQuadrada = () => {
+            // Obtém o valor do campo de entrada
+            const numero = parseFloat(document.getElementById('inputNumero').value);
+            const resultadoDiv = document.getElementById('resultado');
+
+            // Verifica se o valor inserido é válido
+            if (isNaN(numero) || numero < 0) {
+                resultadoDiv.innerText = 'Por favor, insira um número válido (não negativo).'; // Mensagem de erro
+                return; // Sai da função se houver erro
+            }
+
+            // Calcula a raiz quadrada
+            const raizQuadrada = Math.sqrt(numero);
+
+            // Exibe o resultado
+            resultadoDiv.innerText = `A raiz quadrada de ${numero} é: ${raizQuadrada.toFixed(2)}`; // Mostra o resultado com duas casas decimais
+        };
+
+        // Adiciona um evento ao botão para chamar a função quando clicado
+        document.getElementById('calcularButton').addEventListener('click', calcularRaizQuadrada);
+    </script>
+</body>
+</html>
