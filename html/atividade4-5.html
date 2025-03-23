@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificação de Nomes</title>
+</head>
+<body>
+    <h1>Verificação de Nomes</h1>
+    <p id="resultado"></p>
+
+    <script>
+        // Vetor de nomes inicializados
+        const nomes = ["gabriel", "joyce", "talita", "vinicies", "joão", "Fernanda", "elda", "maria", "livia", "pedro"];
+
+        // Lê um novo nome (pode ser alterado para prompt se necessário)
+        const novoNome = prompt("Digite um nome para verificar:");
+
+        // Variável para armazenar o índice do nome encontrado
+        let indice = -1;
+
+        // Loop para verificar se o nome está no vetor
+        for (let i = 0; i < nomes.length; i++) {
+            if (nomes[i] === novoNome) {
+                indice = i; // Armazena o índice se o nome for encontrado
+                break; // Sai do loop se o nome for encontrado
+            }
+        }
+
+        // Exibe o resultado
+        const resultadoElement = document.getElementById("resultado");
+        if (indice !== -1) {
+            resultadoElement.innerText = "O nome '" + novoNome + "' foi encontrado na posição: " + indice;
+        } else {
+            resultadoElement.innerText = "Nome não encontrado.";
+        }
+    </script>
+</body>
+</html>

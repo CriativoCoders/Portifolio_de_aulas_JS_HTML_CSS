@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Idades Acima da Média</title>
+</head>
+<body>
+    <h1>Idades Acima da Média</h1>
+    <p id="resultado"></p>
+
+    <script>
+        // Array com as idades de 20 pessoas
+        const idades = [25, 30, 22, 28, 35, 40, 18, 20, 27, 33, 29, 31, 24, 26, 21, 19, 34, 36, 23, 32];
+
+        // Função para calcular a média das idades
+        function calcularMedia(idades) {
+            let soma = 0;
+
+            // Soma todas as idades
+            for (let i = 0; i < idades.length; i++) {
+                soma += idades[i];
+            }
+
+            // Calcula a média
+            return soma / idades.length;
+        }
+
+        // Função para encontrar idades acima da média
+        function idadesAcimaDaMedia(idades, media) {
+            return idades.filter(idade => idade > media);
+        }
+
+        // Calcula a média das idades
+        const mediaIdade = calcularMedia(idades);
+        // Encontra as idades acima da média
+        const idadesAcima = idadesAcimaDaMedia(idades, mediaIdade);
+
+        // Exibe o resultado
+        document.getElementById("resultado").innerText = 
+            `A média das idades é: ${mediaIdade.toFixed(2)}\n` +
+            `Idades acima da média: ${idadesAcima.join(', ')}`;
+    </script>
+</body>
+</html>

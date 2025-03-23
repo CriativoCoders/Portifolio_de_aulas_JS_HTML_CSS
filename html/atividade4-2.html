@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cálculo da Média Aritmética</title>
+</head>
+<body>
+    <h1>Cálculo da Média Aritmética</h1>
+    <p id="resultado"></p>
+
+    <script>
+        // Declaração do vetor com 8 valores inteiros
+        const valores = [10, 20, 30, 40, 50, 60, 70, 80];
+
+        // Função para calcular a média aritmética
+        function calcularMedia(vetor) {
+            let soma = 0;
+
+            // Soma todos os valores do vetor
+            for (let i = 0; i < vetor.length; i++) {
+                soma += vetor[i];
+            }
+
+            // Calcula a média
+            const media = soma / vetor.length;
+            return media;
+        }
+
+        // Chama a função e exibe o resultado
+        const mediaAritmetica = calcularMedia(valores);
+        document.getElementById("resultado").innerText = "A média aritmética dos valores é: " + mediaAritmetica;
+    </script>
+</body>
+</html>

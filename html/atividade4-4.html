@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Números Pares</title>
+</head>
+<body>
+    <h1>Verificação de Números Pares</h1>
+    <p id="resultado"></p>
+
+    <script>
+        // Array com 10 números (você pode modificar esses números)
+        const numeros = [1, 3, 5, 7, 9, 2, 4, 6, 8, 10];
+
+        // Função para encontrar números pares
+        function encontrarPares(numeros) {
+            const pares = numeros.filter(numero => numero % 2 === 0);
+            return pares;
+        }
+
+        // Encontra os números pares
+        const numerosPares = encontrarPares(numeros);
+
+        // Exibe o resultado
+        const resultadoElement = document.getElementById("resultado");
+        if (numerosPares.length > 0) {
+            resultadoElement.innerText = "Números pares: " + numerosPares.join(', ');
+        } else {
+            resultadoElement.innerText = "Todos os números são pares.";
+        }
+    </script>
+</body>
+</html>

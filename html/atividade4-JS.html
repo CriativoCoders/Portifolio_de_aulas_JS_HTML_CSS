@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/styles_atividadeJS.css">
+    <link rel="icon" href="imagem-icon/JS-icon.png" type="image/x-icon">
+    <title>Atividades JavaScript - Aula 4</title>
+</head>
+<body>
+    <!-- Aqui tenho o botão onde eu acesso a pagina inicial -->
+    <header>
+        <button class="Botao_link" id="VoltarBotao">
+            <a href="index.html">Voltar</a>
+        </button>
+        <div class="Titulo">
+            <h2>Atividades JavaScript - Aula 4</h2>
+        </div>
+    </header>
+
+
+    <section class="Container_atividades">
+        <h2>Atividades</h2>
+        <div class="Atividades-container">
+            <div class="Atividade">
+                <img src="imagem-icon/JS-icon.png" alt="JavaScript" class="skill-icon">
+                <h3>Questão 1</h3>
+                <p>Dobro de Valores em um Vetor</p>
+                <a href="questao4-1.html"><button class="botao">Ver</button></a>
+            </div>
+            <div class="Atividade">
+                <img src="imagem-icon/JS-icon.png" alt="icone-figma" class="skill-icon">
+                <h3>Questão 2</h3>
+                <p>Cálculo da Média Aritmética</p>
+                <a href="atividade4-2.html"><button class="botao">Ver</button></a>
+            </div>
+        
+            <div class="Atividade">
+                <img src="imagem-icon/JS-icon.png" alt="icone-JS" class="skill-icon">
+                <h3>questão 3</h3>
+                <p>calculos de idade a cima da media</p>
+                <a href="atividade4-3.html"><button class="botao">Ver</button></a>
+            </div>
+
+            <div class="Atividade">
+                <img src="imagem-icon/JS-icon.png" alt="icone-JS" class="skill-icon">
+                <h3>questão 4</h3>
+                <p>calculadora de numeros pares</p>
+                <a href="atividade4-4.html"><button class="botao">Ver</button></a>
+            </div>
+
+            <div class="Atividade">
+                <img src="imagem-icon/JS-icon.png" alt="icone-JS" class="skill-icon">
+                <h3>questão 5</h3>
+                <p>verificador de nomes</p>
+                <a href="atividade4-5.html"><button class="botao">Ver</button></a>
+            </div>
+
+            <div class="Atividade">
+                <a href="https://coderpad.io/blog/development/what-you-never-learned-about-javascript-functions/">
+                    <img src="imagem-icon/internet-icon.png" alt="icone-JS" class="skill-icon">
+                </a>
+                <h3>Fonte de Estudos</h3>
+                <p>Link de pesquisas para aprofundamento de conteúdo JavaScript</p>
+                <a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript"><button class="botao">Ver</button></a>
+                <a href="https://www.youtube.com/user/TechGuyWeb">
+                <div style="text-align: center; margin-top: 10px;">Saber mais</div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        document.getElementById("VoltarBotao").onclick = function() {
+            var resposta = confirm("voce deseja voltar para pagina inicial? ")
+
+            if (resposta) {
+                window.history.back();
+            } else {
+                alert("voce saiu da página atual")
+            }
+        };
+        
+        
+    </script>
+    
+</body>
+</html>

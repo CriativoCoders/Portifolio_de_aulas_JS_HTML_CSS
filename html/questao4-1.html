@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dobro de Valores em um Vetor</title>
+</head>
+<body>
+    <h1>Dobro de Valores em um Vetor</h1>
+    
+    <!-- Botão para calcular o dobro -->
+    <button id="calcularButton">Calcular Dobro</button>
+    
+    <!-- Onde o resultado será exibido -->
+    <h2 id="resultado"></h2>
+
+    <script>
+        // Vetor com 5 valores inicializados
+        const valores = [2, 4, 6, 8, 10];
+
+        // Função para calcular o dobro de cada valor no vetor
+        const calcularDobro = () => {
+            const resultados = valores.map(valor => valor * 2); // Calcula o dobro usando map
+            return resultados;
+        };
+
+        // Adiciona um evento ao botão para chamar a função quando clicado
+        document.getElementById('calcularButton').addEventListener('click', () => {
+            const dobroValores = calcularDobro(); // Chama a função para calcular o dobro
+            const resultadoDiv = document.getElementById('resultado');
+
+            // Exibe os resultados
+            resultadoDiv.innerText = `Os dobros dos valores são: ${dobroValores.join(', ')}`;
+        });
+    </script>
+</body>
+</html>
