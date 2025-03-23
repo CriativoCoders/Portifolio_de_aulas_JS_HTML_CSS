@@ -34,8 +34,7 @@ Este portfólio também contém **atividades práticas de JavaScript** que permi
 
 - Exercícios com Arrow function.
 - Criação de formulários.
-- Implementação de validações de entrada.
-- Projetos pequenos para consolidar o aprendizado.
+- Projetos pequenos para consolidar o aprendizado como o projeto do Restaurante.
 
 ---
 
