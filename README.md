@@ -32,8 +32,8 @@ Este projeto é um portfólio de aulas sobre **levantamento de requisitos**. O o
 
 Este portfólio também contém **atividades práticas de JavaScript** que permitem aplicar os conceitos aprendidos nas aulas. As atividades incluem:
 
-- Exercícios de manipulação do DOM.
-- Criação de formulários interativos.
+- Exercícios com Arrow function.
+- Criação de formulários.
 - Implementação de validações de entrada.
 - Projetos pequenos para consolidar o aprendizado.
 
