@@ -9,7 +9,7 @@ Este projeto é um portfólio de aulas sobre **levantamento de requisitos**. O o
 - **index.html**: Página principal com a lista de aulas.
 - **aula1.html**: Detalhes da primeira aula.
 - **aula2.html**: Detalhes da segunda aula.
-- **...**: E assim por diante para cada aula.
+- **seguindo passos**: E assim por diante para cada aula.
 
 ---
 
@@ -35,6 +35,7 @@ Este portfólio também contém **atividades práticas de JavaScript** que permi
 - Exercícios com Arrow function.
 - Criação de formulários.
 - Projetos pequenos para consolidar o aprendizado como o projeto do Restaurante.
+- entre em `Restaurante`, `index.html` e veja minhas opções de cardapio e seja feliz !
 
 ---
 

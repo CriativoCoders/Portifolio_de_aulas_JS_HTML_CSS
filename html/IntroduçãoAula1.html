@@ -10,7 +10,7 @@
 
     <!-- header -->
     <header>
-        <button class="Botao_link">
+        <button class="Botao_link" id="VoltarBotao">
             <a href="index.html">Voltar</a>
         </button>
         <div class="Titulo">
@@ -68,6 +68,19 @@
             </div>
         </div>
     </section>
+
+    <script>
+        document.getElementById("VoltarBotao").onclick = function() {
+            var resposta = confirm("voce deseja voltar para pagina inicial? ")
+
+            if (resposta) {
+                window.history.back();
+            } else {
+                alert("voce saiu da página atual")
+            }
+        };
+              
+    </script>
 
     
 
