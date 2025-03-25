@@ -1,4 +1,4 @@
-# Projeto de Levantamento de Requisitos
+# Projeto de Levantamento de Requisitos Portifolio de Aulas ❤
 
 Este projeto é um portfólio de aulas sobre **levantamento de requisitos**. O objetivo é apresentar diferentes técnicas e abordagens para coletar requisitos de forma eficaz.
 
